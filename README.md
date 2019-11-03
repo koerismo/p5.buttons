@@ -1,10 +1,10 @@
 # p5.buttons
 ### Table of Contents
-* [Quickstart](###Quickstart)
-* [List of Methods](###List-of-Methods)
-* [List of Button Events](###List-of-Button-Events)
-* [List of Button Variables](###List-of-Button-Variables)
-* [Style Properties](###Style-Properties)
+* [Quickstart](#Quickstart)
+* [List of Methods](#List-of-Methods)
+* [List of Button Events](#List-of-Button-Events)
+* [List of Button Variables](#List-of-Button-Variables)
+* [Style Properties](#Style-Properties)
 ### Quickstart
 ```javascript
 var myButton;
