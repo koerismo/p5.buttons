@@ -18,7 +18,7 @@ function button() {
     'background':'#eee',
     'color':'#000',
     'borderRadius':5,
-    'useBorder':false,
+    'border':false,
     'borderWidth':1,
     'borderColor':'#fff'
   }
@@ -28,7 +28,7 @@ function button() {
     'background':'#27f',
     'color':'#fff',
     'borderRadius':5,
-    'useBorder':false,
+    'border':false,
     'borderWidth':1,
     'borderColor':'#000'
   }
@@ -79,7 +79,7 @@ function button() {
     inside = this.mouseInside()
     
     fill(this.activeStyle.background)
-    if (this.activeStyle.useBorder) {
+    if (this.activeStyle.border) {
       strokeWeight(this.activeStyle.borderWidth)
       stroke(this.activeStyle.borderColor)
     }
