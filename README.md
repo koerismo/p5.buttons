@@ -44,11 +44,20 @@ function draw() {
 | hoverStyle | the appearance of the button when hovered on |
 
 ### Style Properties
-| Property | Description |
-| - | - |
-| style.color | the color of the button |
-| style.background | the background color of the button |
-| style.fontSize | the font size of the button text |
-| style.fontFamily | the font family of the button text |
-| style.border | the border on the sides of the button |
-| style.borderRadius | the radius of the edge  |
+| Property | Description | Default |
+| - | - | - |
+| style.color | the color of the button | '#000' |
+| style.background | the background color of the button | '#eee' |
+| style.fontSize | the font size of the button text | 12 |
+| style.fontFamily | the font family of the button text | 'sans-serif' |
+| style.border | the border on the sides of the button | false |
+| style.borderColor | the color of the border  | '#000' |
+| style.borderRadius | the radius of the edge  | 5 |
+| - | - | - |
+| hoverStyle.color | the color of the button | '#fff' |
+| hoverStyle.background | the background color of the button | '#27f' |
+| hoverStyle.fontSize | the font size of the button text | 12 |
+| hoverStyle.fontFamily | the font family of the button text | 'sans-serif' |
+| hoverStyle.border | the border on the sides of the button | false |
+| hoverStyle.borderColor | the color of the border  | '#000' |
+| hoverStyle.borderRadius | the radius of the edge  | 5 |
