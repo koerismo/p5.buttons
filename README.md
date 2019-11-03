@@ -1,4 +1,5 @@
 # p5.buttons
+![p5.buttons icon]('./p5buttons.png')
 ### Table of Contents
 * [Quickstart](#Quickstart)
 * [List of Methods](#List-of-Methods)
