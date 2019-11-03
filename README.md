@@ -1,5 +1,5 @@
 # p5.buttons
-![p5.buttons icon]('https://github.com/koerismo/p5.buttons/blob/master/p5buttons.png?raw=true')
+![p5.buttons icon](https://github.com/koerismo/p5.buttons/blob/master/p5buttons.png?raw=true)
 ### Table of Contents
 * [Quickstart](#Quickstart)
 * [List of Methods](#List-of-Methods)
