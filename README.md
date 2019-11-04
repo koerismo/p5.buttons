@@ -44,9 +44,11 @@ function draw() {
 | Variable | Description |
 | - | - |
 | content | the text inside the button |
+| disabled | determines whether the user can interact with the button |
 | style | the appearance of the button |
 | hoverStyle | the appearance of the button when hovered on |
 | clickStyle | the appearance of the button when pressed |
+| disabledStyle | the appearance of the button when disabled |
 
 ### Style Properties
 | Property | Description | Default |
@@ -74,3 +76,11 @@ function draw() {
 | clickStyle.border | the border on the sides of the button | *inherit* |
 | clickStyle.borderColor | the color of the border  | *inherit* |
 | clickStyle.borderRadius | the radius of the edge  | *inherit* |
+| - | - | - |
+| disabledStyle.color | the color of the button | '#aaa' |
+| disabledStyle.background | the background color of the button | '#777' |
+| disabledStyle.fontSize | the font size of the button text | *inherit* |
+| disabledStyle.fontFamily | the font family of the button text | *inherit* |
+| disabledStyle.border | the border on the sides of the button | *inherit* |
+| disabledStyle.borderColor | the color of the border  | *inherit* |
+| disabledStyle.borderRadius | the radius of the edge  | *inherit* |
