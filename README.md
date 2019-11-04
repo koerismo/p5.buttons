@@ -43,6 +43,7 @@ function draw() {
 | content | the text inside the button |
 | style | the appearance of the button |
 | hoverStyle | the appearance of the button when hovered on |
+| clickStyle | the appearance of the button when pressed |
 
 ### Style Properties
 | Property | Description | Default |
@@ -57,8 +58,16 @@ function draw() {
 | - | - | - |
 | hoverStyle.color | the color of the button | '#fff' |
 | hoverStyle.background | the background color of the button | '#27f' |
-| hoverStyle.fontSize | the font size of the button text | 12 |
-| hoverStyle.fontFamily | the font family of the button text | 'sans-serif' |
-| hoverStyle.border | the border on the sides of the button | false |
-| hoverStyle.borderColor | the color of the border  | '#000' |
-| hoverStyle.borderRadius | the radius of the edge  | 5 |
+| hoverStyle.fontSize | the font size of the button text | *inherit* |
+| hoverStyle.fontFamily | the font family of the button text | *inherit* |
+| hoverStyle.border | the border on the sides of the button | *inherit* |
+| hoverStyle.borderColor | the color of the border  | *inherit* |
+| hoverStyle.borderRadius | the radius of the edge  | *inherit* |
+| - | - | - |
+| clickStyle.color | the color of the button | '#fff' |
+| clickStyle.background | the background color of the button | '#06f' |
+| clickStyle.fontSize | the font size of the button text | *inherit* |
+| clickStyle.fontFamily | the font family of the button text | *inherit* |
+| clickStyle.border | the border on the sides of the button | *inherit* |
+| clickStyle.borderColor | the color of the border  | *inherit* |
+| clickStyle.borderRadius | the radius of the edge  | *inherit* |
