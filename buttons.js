@@ -1,38 +1,38 @@
 function button() {
-  var held = 0
-  var inside = 0
-  var offsetX = 0
-  var offsetY = 0
-  var oX = 0
-  var oY = 0
+  var inheritDict = function(user,standin) {
+    var output = JSON.parse(JSON.stringify(standin))
+    Object.keys(user).forEach(function(x){
+      output[x] = user[x]
+    })
+    return output
+  }
+  var held=0,inside=0,offsetX=0,offsetY=0,oX=0,oY=0;
   this.x = 0
   this.y = 0
-  this.rootX = 0
-  this.rootY = 0
   this.width = 0
   this.height = 0
   this.content = 'undefined'
-  this.style = {
+  var style = {
     'font':'sans-serif',
     'fontSize':12,
     'background':'#eee',
     'color':'#000',
     'borderRadius':5,
-    'border':false,
+    'useBorder':false,
     'borderWidth':1,
     'borderColor':'#fff'
   }
-  this.hoverStyle = {
-    'font':'sans-serif',
-    'fontSize':12,
-    'background':'#27f',
-    'color':'#fff',
-    'borderRadius':5,
-    'border':false,
-    'borderWidth':1,
-    'borderColor':'#000'
+  this.style = {
   }
-  this.activeStyle = this.style
+  this.hoverStyle = {
+    'background':'#27f',
+    'color':'#fff'
+  }
+  this.clickStyle = {
+    'background':'#06f',
+    'color':'#fff'
+  }
+  var activeStyle = inheritDict(this.style,style)
   this.align = function(x,y) {
     offsetX = this.width/2*(x-1)
     offsetY = this.height/2*(y-1)
@@ -62,34 +62,39 @@ function button() {
   this.draw = function() {
     oX = this.x+offsetX
     oY = this.y+offsetY
-    if (!held && mouseIsPressed && this.mouseInside()) {this.onClick()}
+    if (!held && mouseIsPressed && this.mouseInside()) {
+      this.onClick()
+      activeStyle = inheritDict(this.clickStyle,inheritDict(this.style,style))
+    }
     if (held && mouseIsPressed && this.mouseInside()) {this.onHold()}
-    if (held && !mouseIsPressed && this.mouseInside()) {this.onRelease()}
+    if (held && !mouseIsPressed && this.mouseInside()) {
+      this.onRelease()
+      activeStyle = inheritDict(this.hoverStyle,inheritDict(this.style,style))
+    }
     if (inside && !this.mouseInside()) {
       this.onExit()
+      activeStyle = inheritDict(this.style,style)
       document.body.style.cursor = 'default'
-      this.activeStyle = this.style
     }
     if (!inside && this.mouseInside()) {
       this.onEnter()
+      activeStyle = inheritDict(this.hoverStyle,inheritDict(this.style,style))
       document.body.style.cursor = 'pointer'
-      this.activeStyle = this.hoverStyle
     }
     held = mouseIsPressed
     inside = this.mouseInside()
-    
-    fill(this.activeStyle.background)
-    if (this.activeStyle.border) {
-      strokeWeight(this.activeStyle.borderWidth)
-      stroke(this.activeStyle.borderColor)
+    fill(activeStyle.background)
+    if (activeStyle.useBorder) {
+      strokeWeight(activeStyle.borderWidth)
+      stroke(activeStyle.borderColor)
     }
     else {noStroke()}
-    rect(oX,oY,this.width,this.height,this.activeStyle.borderRadius)
-    fill(this.activeStyle.color)
+    rect(oX,oY,this.width,this.height,activeStyle.borderRadius)
+    fill(activeStyle.color)
     textAlign(CENTER,CENTER)
     noStroke()
-    textFont(this.activeStyle.font)
-    textSize(this.activeStyle.fontSize)
+    textFont(activeStyle.font)
+    textSize(activeStyle.fontSize)
     text(this.content,oX+this.width/2,oY+this.height/2)
   }
 }
