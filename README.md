@@ -8,19 +8,22 @@
 * [Style Properties](#Style-Properties)
 ### Quickstart
 ```javascript
-var myButton;
+var count = 1;
 function setup() {
-    myButton = new button()
-    myButton.place(0,0,100,100) // x y width height
-    myButton.content = 'My Button!'
-    myButton.onClick = function() {
-        alert('Button was clicked!')
-    }
+  createCanvas(windowWidth, windowHeight);
+  myButton = new button()
+  myButton.place(width/2,height/2,100,50) 
+  myButton.align(0,0)
+  myButton.content = 'Clicks: 0'
+  myButton.onClick = function() {myButton.content = 'Clicks: '+count;count++;}
 }
+
 function draw() {
-    myButton.draw()
+  background(30);
+  myButton.draw();
 }
 ```
+[Example](https://editor.p5js.org/Koerismo/sketches/E30URuLD5)
 ### List of Methods
 | Method | Description | Usage |
 | - | - | - |
