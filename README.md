@@ -1,5 +1,5 @@
-# p5.buttons (v2)
-![p5.buttons icon](https://github.com/koerismo/p5.buttons/blob/master/p5buttons.png?raw=true)
+# p5.buttons (2022)
+![p5.buttons icon](https://github.com/koerismo/p5.buttons/blob/new/p5buttons.png?raw=true)
 
 ### Table of Contents
 * [Quickstart](#Quickstart)
@@ -66,7 +66,7 @@ function draw() {
 | style.color | the text color of the button | "#111" |
 | style.background | the background color of the button | "#eee" |
 | style.text_size | the font size of the button text | 12 |
-| style.text_font | the font family of the button text | 'sans-serif' |
+| style.text_font | the font family of the button text | "sans-serif" |
 | style.border_width | the width of the border. Set to zero to disable. | 0 |
 | style.border_color | the color of the border | "" |
 | style.border_radius | the radius in pixels to round the button | 5 |
